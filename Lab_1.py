@@ -6,7 +6,6 @@ Python Programming Lab Report – Lab 01
 Student Name : Jay Prakash Yadav
 GitHub       : https://github.com/jayp7-ui
 Lab Title    : Introduction to Python Basics
-Language     : Python 3
 
 -----------------------------------------
 OBJECTIVE
@@ -123,4 +122,5 @@ This lab provides a strong foundation in
 Python programming and prepares for
 advanced topics like backend development.
 """
+
 
