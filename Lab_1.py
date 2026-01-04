@@ -1,13 +1,10 @@
 """
-=========================================
 Python Programming Lab Report – Lab 01
 =========================================
 
 Student Name : Jay Prakash Yadav
-GitHub       : https://github.com/jayp7-ui
 Lab Title    : Introduction to Python Basics
 
------------------------------------------
 OBJECTIVE
 -----------------------------------------
 1. To understand basic data types in Python
@@ -16,7 +13,6 @@ OBJECTIVE
 4. To use input() and type casting
 5. To define and use functions
 
------------------------------------------
 THEORY
 -----------------------------------------
 Python is a high-level, interpreted programming language.
@@ -37,7 +33,6 @@ The input() function always takes input as a string.
 Type casting is required for numerical operations.
 """
 
-# ---------------------------------------
 # 1. BASIC DATA TYPES
 # ---------------------------------------
 
@@ -51,7 +46,6 @@ j = {1, 2, 3}          # set
 i = True               # boolean
 d = {"Name": "Jay Prakash", "id": 15}  # dictionary
 
-# ---------------------------------------
 # 2. LOOP THROUGH LIST
 # ---------------------------------------
 
@@ -59,7 +53,6 @@ print("Elements of list:")
 for item in l:
     print(item)
 
-# ---------------------------------------
 # 3. RANGE FUNCTION
 # ---------------------------------------
 
@@ -67,7 +60,6 @@ print("\nEven numbers from 0 to 8:")
 for num in range(0, 10, 2):
     print(num)
 
-# ---------------------------------------
 # 4. TYPE CHECKING
 # ---------------------------------------
 
@@ -77,14 +69,12 @@ print(type(b))
 print(type(d))
 print(type(t))
 
-# ---------------------------------------
 # 5. INPUT FUNCTION
 # ---------------------------------------
 
 name = input("\nEnter your name: ")
 print(f"Hello {name}")
 
-# ---------------------------------------
 # 6. TYPE CASTING
 # ---------------------------------------
 
@@ -96,7 +86,6 @@ c = int(input("Enter a number: "))
 d = int(input("Enter another number: "))
 print("With type casting (int):", c + d)
 
-# ---------------------------------------
 # 7. FUNCTION EXAMPLE
 # ---------------------------------------
 
@@ -109,18 +98,17 @@ def area_rectangle(x, y):
 print("\nArea of rectangle:", area_rectangle(4, 5))
 
 """
------------------------------------------
 RESULT
 -----------------------------------------
 All programs executed successfully and
 basic Python concepts were understood.
 
------------------------------------------
 CONCLUSION
 -----------------------------------------
 This lab provides a strong foundation in
 Python programming and prepares for
 advanced topics like backend development.
 """
+
 
 
