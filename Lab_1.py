@@ -50,7 +50,7 @@ l = [4, 5, 6]          # list
 t = (1, 2, 3)          # tuple
 j = {1, 2, 3}          # set
 i = True               # boolean
-d = {"Name": "Jay Prakash", "id": 28}  # dictionary
+d = {"Name": "Jay Prakash", "id": 15}  # dictionary
 
 # ---------------------------------------
 # 2. LOOP THROUGH LIST
@@ -123,3 +123,4 @@ This lab provides a strong foundation in
 Python programming and prepares for
 advanced topics like backend development.
 """
+
