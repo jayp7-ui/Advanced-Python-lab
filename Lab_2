@@ -1,1 +1,74 @@
 
+Lab 2:
+Iterator, Generator and Decorator
+Definitions and Syntax
+Iterator:
+An iterator is an object that allows a programmer to traverse through all the elements of a collection( list a list) one by one. It implements the Iterator Protocal, consisting of two methods: iter() and next().
+
+Syntax:
+my_list = [1, 2, 3]
+it = iter(my_list) # Get iterator
+print(next(it))    # Get next element
+Generator:
+A Generator is a simpler way to create iterators using a function. Instead of return, it uses the yield keyword. It pauses its state between calls, saving memory because it generates items "on the fly" rather than storing them in a list.
+
+Syntax:
+def my_generator():
+    yield 1
+    yield 2
+
+gen = my_generator()
+Decorator:
+A Decorator is a function that takes another function and extends its behavior without explicitly modifying it. It’s essentially a "wrapper."
+
+def my_decorator(func):
+    def wrapper():
+        print("Before the function.")
+        func()
+        print("After the function.")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello!")
+Is a for loop and iterator?
+No. A for loop is a control flow statement, not an iterator itself.
+However, a for loop uses an iterator behind the scenes. When you write for item in my_list:, Python internally calls iter(my_list) to get an iterator and then repeatedly calls next() until the items run out.
+
+Feature	Iterator	Generator
+Implementation	Uses a class with iter and next.	Uses a function with the yeild keyword.
+Complexity	More heavy code	Concise and easy to read
+State	You must manage the internal state manually.	Python manages the satte automatically.
+Memory	Can be high if converting a large list.	Highly memory-efficient.
+Program:
+def log_status(func):
+    def wrapper(*args, **kwargs):
+        print(f"--- Starting {func.__name__} ---")
+        result = func(*args, **kwargs)
+        print(f"--- Finished {func.__name__} ---")
+        return result
+    return wrapper
+
+
+class Student:
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+
+
+@log_status
+def get_passing_students(students):
+    for student in students:
+        if student.score >= 50:
+            yield student.name
+
+
+classroom = [Student("Ram", 90), Student("Shyam", 40), Student("Hari", 75)]
+
+
+for name in get_passing_students(classroom):
+    print(f"Passed: {name}")
+--- Starting get_passing_students ---
+--- Finished get_passing_students ---
+Passed: Ram
+Passed: Hari
